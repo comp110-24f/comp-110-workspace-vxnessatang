@@ -27,14 +27,16 @@ def input_letter() -> str:
 
 def contains_char(word: str, letter: str) -> None:
     """Checks if word contains the letter and displays number of letter's instances"""
-    count: int = 0  # defines counter variable
+    count: int = 0  # defines instances counter variable
+    idx: int = 0  # defines index counter variable
     print("Searching for " + letter + " in " + word)
 
     # iterates through each letter of the word to check if it's the inputted letter
-    for i in range(len(word)):
-        if word[i] == letter:
-            print(letter + " found at index " + str(i))
-            count += 1  # increments counter for each iteration
+    while idx <= len(word) - 1:
+        if word[idx] == letter:
+            print(letter + " found at index " + str(idx))
+            count += 1  # increments counter for each instance
+        idx += 1  # updates index counter for each iteration
 
     if count == 0:
         print(

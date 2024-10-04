@@ -76,7 +76,7 @@ def main(secret: str) -> None:
             if guess == secret:
                 won = True
                 print(f"You won in {turn_number}/{turns} turns!")
-                exit()  # ends game so the losing message doesn't print
+                return None  # ends game so the losing message doesn't print
             turn_number += 1
 
     print(f"X/{turns} - Sorry, try again tomorrow!")
